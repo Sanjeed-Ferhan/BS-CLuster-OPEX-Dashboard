@@ -430,7 +430,7 @@ async function loadDayLog(sbuName){
     pgFetch("accl_qcp_audit",        `select=audit_date&${sbuQ}`),
     pgFetch("accl_5s_audit_entries", `select=audit_timestamp,final_score_pct&${sbuQ}`),
     pgFetch("accl_training_provided",`select=completion_date,created_at,status&${sbuQ}`),
-    pgFetch("kaizen_calculation_pacing", `select=kaizen_date,savings_bdt&${sbuQ}`),
+    pgFetch("accl_cost_savings", `select=kaizen_date,savings_bdt&${sbuQ}`),
     pgFetch("accl_projects",         `select=project_name,start_date&${sbuQ}`),
     pgFetch("Breakdown (Accl)",      `select=breakdown_date,breakdown_name,breakdown_reason,downtime&${sbuQ}`),
   ]);
